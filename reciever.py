@@ -46,7 +46,7 @@ def load_file():
     data = np.int16(data)
     total_samples = len(data)
     length = total_samples / sample_rate
-    time = np.linspace(0., length, total_samples)
+    time = np.linspace(0, length, total_samples)
 
     return (data, sample_rate, total_samples, length, time)
 
@@ -118,7 +118,7 @@ def main():
     # even if it may be inaccurate
 
     # pads the missing image with black pixels where data has been missed for now
-    
+
     for i in range(0, TOTAL_PIXELS_IN_IMAGE):
         pixels.append(0)
     pixels = (np.uint8(pixels))[:TOTAL_PIXELS_IN_IMAGE]
